@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30104.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookMarket.Core", "BookMarket.Core\BookMarket.Core.csproj", "{554C08A6-F10B-4E4B-8A89-2FBDEC9B114A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookMarket.Core", "BookMarket.Core\BookMarket.Core.csproj", "{554C08A6-F10B-4E4B-8A89-2FBDEC9B114A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookMarket.Core.Tests", "BookMarket.Core.Tests\BookMarket.Core.Tests.csproj", "{6998A41C-2FA3-4C16-BA1F-51597C2AB577}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookMarket.Core.Tests", "BookMarket.Core.Tests\BookMarket.Core.Tests.csproj", "{6998A41C-2FA3-4C16-BA1F-51597C2AB577}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookMarket.Data", "BookMarket.Data\BookMarket.Data.csproj", "{092114CE-8E0B-4161-8223-20AFA297619E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookMarket.Data", "BookMarket.Data\BookMarket.Data.csproj", "{092114CE-8E0B-4161-8223-20AFA297619E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookMarket.Api", "BookMarket.Api\BookMarket.Api.csproj", "{0EBBDDA8-A215-4E4A-B9BA-6372B064F195}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookMarket.Api", "BookMarket.Api\BookMarket.Api.csproj", "{0EBBDDA8-A215-4E4A-B9BA-6372B064F195}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
