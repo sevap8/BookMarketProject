@@ -43,12 +43,11 @@ namespace BookMarket.Data.Repositories
 
         public bool Contains(BookEntity bookEntity)
         {
-            // return this.dbContext.Meetings.Any(a =>
-            //a.Name == meetingEntity.Name
-            //&& a.Place == meetingEntity.Place
-            //&& a.DateTimeMeeting == meetingEntity.DateTimeMeeting
-            //&& a.Id == meetingEntity.Id);
-            return true;
+             return this.dbContext.Books.Any(a =>
+            a.Name == bookEntity.Name
+            && a.Year == bookEntity.Year
+            && a.Cost == bookEntity.Cost
+            && a.Id == bookEntity.Id);
         }
 
         public void Remove(BookEntity bookEntity)

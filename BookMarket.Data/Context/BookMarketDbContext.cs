@@ -56,7 +56,7 @@ namespace BookMarket.Data.Context
             {
                 new TransactionEntity { 
 
-                    Id = Guid.NewGuid(), 
+                    Id = 1, 
                     Data = new DateTime(), 
                     СustomerId = 1,  
                     BookId = 1,  
@@ -64,7 +64,7 @@ namespace BookMarket.Data.Context
                     Quantity = 2,
                 },
                                 new TransactionEntity { 
-                    Id = Guid.NewGuid(), 
+                    Id = 2, 
                     Data = new DateTime(),
                     СustomerId = 2,
                     BookId = 1,
@@ -72,7 +72,7 @@ namespace BookMarket.Data.Context
                     Quantity = 2,
                 },
                                                 new TransactionEntity { 
-                    Id = Guid.NewGuid(), 
+                    Id = 3, 
                     Data = new DateTime(),
                     СustomerId = 1,
                     BookId = 2,

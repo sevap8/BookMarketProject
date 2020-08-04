@@ -7,7 +7,7 @@ using System.Text;
 
 namespace BookMarket.Data.Repositories
 {
-    public class WriterRepository : IWriterRepository
+    public class WriterRepository //: IWriterRepository
     {
         private readonly BookMarketDbContext dbContext;
         public WriterRepository(BookMarketDbContext dbContext)

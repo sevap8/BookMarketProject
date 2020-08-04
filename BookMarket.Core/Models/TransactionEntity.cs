@@ -8,7 +8,7 @@ namespace BookMarket.Core.Models
     public class TransactionEntity
     {
         [Key]
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public DateTime Data { get; set; }
         public int СustomerId { get; set; }
         public СustomerEntity Сustomer { get; set; }
