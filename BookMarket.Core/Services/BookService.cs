@@ -1,10 +1,8 @@
 ﻿using BookMarket.Core.Dto;
 using BookMarket.Core.Models;
-using BookMarket.Core.Services.Interfaces;
 using BookMarket.Data.Repositories;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace BookMarket.Core.Services
 {
@@ -27,13 +25,45 @@ namespace BookMarket.Core.Services
                 Year = bookRegistrationInfo.Year
             };
 
-            if (bookRepository.Contains(bookEntity))
+            if (!bookRepository.Contains(bookEntity))
             {
-                throw new ArgumentException("This meeting has been registered. Can't continue");
+                throw new ArgumentException("This book has been registered. Can't continue");
             }
 
             this.bookRepository.Add(bookEntity);
             this.bookRepository.Save();
+        }
+
+        public void RemoveBook(int id)
+        {
+            if (!bookRepository.ContainsId(id))
+            {
+                throw new ArgumentException($"This book is missing {id}! ");
+            }
+
+            this.bookRepository.Remove(bookRepository.GetById(id));
+            this.bookRepository.Save();
+        }
+
+        public BookEntity GetBookById(int id)
+        {
+            if (!bookRepository.ContainsId(id))
+            {
+                throw new ArgumentException($"This book is missing {id}! ");
+            }
+
+            return bookRepository.GetById(id);
+        }
+
+        public IEnumerable<BookEntity> GetAllBook()
+        {
+            var allBook = bookRepository.GetAll();
+            if (allBook == null)
+            {
+                throw new ArgumentException($"The list is empty! ");
+            }
+
+            return allBook;
         }
     }
 }

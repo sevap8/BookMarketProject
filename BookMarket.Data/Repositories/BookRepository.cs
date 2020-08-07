@@ -46,8 +46,7 @@ namespace BookMarket.Data.Repositories
              return this.dbContext.Books.Any(a =>
             a.Name == bookEntity.Name
             && a.Year == bookEntity.Year
-            && a.Cost == bookEntity.Cost
-            && a.Id == bookEntity.Id);
+            && a.Cost == bookEntity.Cost);
         }
 
         public void Remove(BookEntity bookEntity)

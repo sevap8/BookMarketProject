@@ -1,12 +1,14 @@
 ﻿using BookMarket.Core.Dto;
-using System;
+using BookMarket.Core.Models;
 using System.Collections.Generic;
-using System.Text;
 
-namespace BookMarket.Core.Services.Interfaces
+namespace BookMarket.Core.Services
 {
     public interface IBookService
     {
         void AddBook(BookRegistrationInfo bookRegistrationInfo);
+        IEnumerable<BookEntity> GetAllBook();
+        BookEntity GetBookById(int id);
+        void RemoveBook(int id);
     }
 }
