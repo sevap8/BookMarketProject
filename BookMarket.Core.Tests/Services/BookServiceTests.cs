@@ -5,6 +5,8 @@ using BookMarket.Core.Services;
 using BookMarket.Data.Repositories;
 using Moq;
 using NUnit.Framework;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace BookMarket.Core.Tests.Services
 {
@@ -56,16 +58,17 @@ namespace BookMarket.Core.Tests.Services
             // Arrange
             var bookId = 12;
             var mock = new Mock<IBookRepository>();
+            var bookEntity = new BookEntity { Id = bookId };
+            mock.Setup(a => a.GetById(It.IsAny<int>())).Returns(bookEntity);
             mock.Setup(a => a.ContainsId(It.IsAny<int>())).Returns(true);
             var bookService = new BookService(mock.Object);
-
 
             // Act
             var resylt = bookService.GetBookById(bookId);
 
             // Assert
-            //mock.Verify(a => a.Remove(It.IsAny<BookEntity>()));
             mock.Verify(a => a.GetById(bookId));
+            Assert.AreEqual(resylt, bookEntity);
         }
 
         [Test]
@@ -73,7 +76,10 @@ namespace BookMarket.Core.Tests.Services
         {
             // Arrange
             var mock = new Mock<IBookRepository>();
+            // var listEntity = new Fixture().Create<IEnumerable<BookEntity>>();
+            var listEntity = new List<BookEntity>();
             mock.Setup(a => a.ContainsId(It.IsAny<int>())).Returns(true);
+            mock.Setup(a => a.GetAll()).Returns(listEntity);
             var bookService = new BookService(mock.Object);
             var bookId = 12;
 
@@ -82,6 +88,7 @@ namespace BookMarket.Core.Tests.Services
 
             // Assert
             mock.Verify(a => a.GetAll());
+            Assert.AreEqual(resylt, listEntity);
         }
     }
 }
