@@ -7,7 +7,7 @@ using System.Text;
 
 namespace BookMarket.Data.Repositories
 {
-    public class TransactionRepository //: ITransactionRepository
+    public class TransactionRepository : ITransactionRepository
     {
         private readonly BookMarketDbContext dbContext;
         public TransactionRepository(BookMarketDbContext dbContext)
@@ -43,12 +43,14 @@ namespace BookMarket.Data.Repositories
 
         public bool Contains(TransactionEntity transactionEntity)
         {
-            // return this.dbContext.Meetings.Any(a =>
-            //a.Name == meetingEntity.Name
-            //&& a.Place == meetingEntity.Place
-            //&& a.DateTimeMeeting == meetingEntity.DateTimeMeeting
-            //&& a.Id == meetingEntity.Id);
-            return true;
+             return this.dbContext.Transactions.Any(a =>
+            a.СustomerId == transactionEntity.СustomerId
+            && a.Сustomer == transactionEntity.Сustomer
+            && a.BookId == transactionEntity.BookId
+            && a.Book == transactionEntity.Book
+            && a.Cost == transactionEntity.Cost
+            && a.Quantity == transactionEntity.Quantity
+            && a.Data == transactionEntity.Data);
         }
 
         public void Remove(TransactionEntity transactionEntity)
