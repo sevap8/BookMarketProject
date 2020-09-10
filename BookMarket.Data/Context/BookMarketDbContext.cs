@@ -63,7 +63,7 @@ namespace BookMarket.Data.Context
                     Cost = 150, 
                     Quantity = 2,
                 },
-                                new TransactionEntity { 
+                new TransactionEntity { 
                     Id = 2, 
                     Data = new DateTime(),
                     СustomerId = 2,
@@ -71,7 +71,7 @@ namespace BookMarket.Data.Context
                     Cost = 150,
                     Quantity = 2,
                 },
-                                                new TransactionEntity { 
+                new TransactionEntity { 
                     Id = 3, 
                     Data = new DateTime(),
                     СustomerId = 1,

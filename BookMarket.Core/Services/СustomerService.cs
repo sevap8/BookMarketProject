@@ -23,7 +23,7 @@ namespace BookMarket.Core.Services
                 Password = customerRegistrationInfo.Password
             };
 
-            if (!сustomerRepository.Contains(сustomerEntity))
+            if (сustomerRepository.Contains(сustomerEntity))
             {
                 throw new ArgumentException("This customer has been registered. Can't continue");
             }

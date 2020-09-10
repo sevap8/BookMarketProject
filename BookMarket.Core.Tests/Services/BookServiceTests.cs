@@ -14,7 +14,7 @@ namespace BookMarket.Core.Tests.Services
     public class BookServiceTests
     {
         [Test]
-        public void ShouldAddNewBook()
+        public void AddBook_ShouldAddNewBook()
         {
             // Arrange
             var mock = new Mock<IBookRepository>();
@@ -35,7 +35,7 @@ namespace BookMarket.Core.Tests.Services
         }
 
         [Test]
-        public void ShouldRemoveBook()
+        public void RemoveBook_ShouldRemoveBook()
         {
             // Arrange
             var mock = new Mock<IBookRepository>();
@@ -53,7 +53,7 @@ namespace BookMarket.Core.Tests.Services
         }
 
         [Test]
-        public void ShouldGetBookById()
+        public void GetBookById_ShouldGetBookById()
         {
             // Arrange
             var bookId = 12;
@@ -72,7 +72,7 @@ namespace BookMarket.Core.Tests.Services
         }
 
         [Test]
-        public void ShouldGetAllBook()
+        public void GetAllBook_ShouldGetAllBook()
         {
             // Arrange
             var mock = new Mock<IBookRepository>();

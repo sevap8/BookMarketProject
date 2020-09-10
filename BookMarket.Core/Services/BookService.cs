@@ -25,7 +25,7 @@ namespace BookMarket.Core.Services
                 Year = bookRegistrationInfo.Year
             };
 
-            if (!bookRepository.Contains(bookEntity))
+            if (bookRepository.Contains(bookEntity))
             {
                 throw new ArgumentException("This book has been registered. Can't continue");
             }

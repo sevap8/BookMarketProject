@@ -23,7 +23,7 @@ namespace BookMarket.Core.Services
                 Surname = writerRegistrationInfo.Surname
             };
 
-            if (!writerRepository.Contains(writerEntity))
+            if (writerRepository.Contains(writerEntity))
             {
                 throw new ArgumentException("This writer has been registered. Can't continue");
             }

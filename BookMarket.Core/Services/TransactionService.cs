@@ -16,7 +16,7 @@ namespace BookMarket.Core.Services
 
         public void AddTransaction(TransactionEntity transactionEntity)
         {
-            if (!transactionRepository.Contains(transactionEntity))
+            if (transactionRepository.Contains(transactionEntity))
             {
                 throw new ArgumentException("This transaction has been registered. Can't continue");
             }
